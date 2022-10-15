@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Making a sticky header</title>
+
+</head>
+<body>
+    <header>
+        <div class="inner_flex">
+            <a href="#" id="logo">CodeCamp</a>
+            <nav>
+                <ul>
+                    <li><a  href="#" class="active">Home</a></li>
+                    <li><a  href="#" >Services</a></li>
+                    <li><a  href="#" >About</a></li>
+                    <li><a  href="#" >Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+       
+            <div class="inner">
+
+            </div>
+
+            <div class="inner">
+                
+            </div>
+
+            <div class="inner">
+                
+            </div>
+     
+    </section>
+    <script>
+         
+        const body = document.body;
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset
+
+            if (currentScroll<= 0) {
+                body.classList.remove("scroll-up")
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-up")
+                body.classList.add("scroll-down")
+            }
+
+            if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+                body.classList.remove("scroll-down")
+                body.classList.add("scroll-up")
+            }
+
+             lastScroll = currentScroll; //positioning of this line is very important
+        })
+
+    </script>
+</body>
+</html>
