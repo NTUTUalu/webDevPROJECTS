@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style1.css" />
+    <script
+      src="https://kit.fontawesome.com/42b8ef037c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Progression pages</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="index.html"><img src="img/logo.png" /></a>
+
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../Aboutus.html">ABOUT</a></li>
+            <li><a href="../Contactus.html">CONTACT US</a></li>
+            <li class="current">
+              <a>OPPORTUNITIES</a>
+              <ul>
+                <li><a href="showcase.html">SHOW CASE</a></li>
+                <li><a href="#">CREDIT OPTIONS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" id="ham" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="wrapper">
+        <!-- Circles which indicates the steps of the form: -->
+        <div id="circles">
+          <a href="register1.html"><span class="step"></span></a>
+          <span class="step active"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+
+       
+        <div class="tab" id="wrap-values">
+          <h1 id="valued">Values</h1>
+          <div class="values-group">
+            <h2>Choose applicable values to your business</h2>
+            <div class="row-fluid">
+              <div class="values">
+                <label class="checkbox inline">Respect</label>
+                <input type="checkbox" value="2" />
+              </div>
+              <div class="values">
+                <label class="checkbox inline">Quality</label>
+                <input type="checkbox" value="2" />
+              </div>
+              <div class="values">
+                <label class="checkbox inline">Integrity</label>
+                <input type="checkbox" value="2" />
+              </div>
+              <div class="values">
+                <label class="checkbox inline">Trust</label>
+                <input type="checkbox" value="2" />
+              </div>
+
+              <div class="values">
+                <label class="checkbox inline">Safety</label>
+                <input type="checkbox" value="2" />
+              </div>
+            </div>
+
+            <textarea
+              rows="7"
+              placeholder="Tell us what your business is about in less that 200 characters"
+              id="values-message"
+              onkeyup="validateValueMessage()"
+              maxlength="200"
+            ></textarea>
+            <span id="values-Error"></span>
+            <div class="v_btns">
+              <button ><a href="register3.html">NEXT</a></button>
+            </div>
+            
+          </div>
+        </div> 
+
+      </div>
+    </div> 
+
+    <script src="main.js"></script>
+  </body>
+</html>

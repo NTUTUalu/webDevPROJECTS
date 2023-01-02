@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+    <script src="https://kit.fontawesome.com/42b8ef037c.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="businessRegister">
+        <div class="reg">
+            <img src="./img/rr.jpg">
+        </div>
+        <div id="reg">
+            <label>Register</label>
+            
+            <div class="fields">
+                <h5>Business Name</h5>
+                <input type="text" maxlength="30" placeholder="Business Name" >
+            </div>
+
+            <div class="fields">
+                <h5>Years of Operation</h5>
+               
+                <select id="choices" name="years" placeholder="choose car">
+                    <option value="" disabled selected hidden>Years of Operation</option>
+                    <option value="1-5">1-5 years</option>
+                    <option value="6-8">6-8</option>
+                    <option value="8">8+ years</option>
+                    <option value="none">None for the above</option>
+                  </select>
+
+            </div>
+
+            <div class="fields">
+                <h5>Employees</h5>
+                <select id="choices" name="years" placeholder="choose car">
+                    <option value="" disabled selected hidden>Employees</option>
+                    <option value="1-5">1-10  Employees</option>
+                    <option value="6-8">10-50  Employees</option>
+                    <option value="8">50+  Employees</option>
+                    <option value="none">None for the above</option>
+                </select> 
+            </div>
+            
+            <div class="fields">
+                <h5>Email</h5>
+                <input type="text" maxlength="30" placeholder="Enter Email" onkeyup="validateEmail_v2()" id="emailfield">
+                <span id="email-Error"></span>
+            </div>
+            <div class="fields">
+                <h5>Enter password</h5>
+                <input type="text" maxlength="8" placeholder="Enter password" onkeyup="validatePassword_v2()" id="passwordfield">
+                <span id="password-Error"></span>
+
+            </div>
+            <div class="fields">
+                <h5>Confirm password</h5>
+                <input type="text" maxlength="8" placeholder="Confirm password" onkeyup="validatePassword_v3()" id="confirmfield">
+                <span id="confirm-Error"></span>
+            </div>
+            <button onclick=" return validateForm3()" type="button" ><a href="detailsLog.html">Register</a></button>
+            <span id="form-Error"></span>
+            <a href="index.html">HOME</a>
+        </div>
+    </div> 
+
+    <script src="main.js"></script>
+</body>
+</html>
+        
+       

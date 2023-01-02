@@ -1,0 +1,515 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+
+  :root{
+    --background-color: #FFFBF2;
+    --theme-darker: #775302;
+    --theme-light:  #FFA033;
+    --theme-placeHolder: #999;
+    --btn-text: black;
+    --btn-shadow: 0px 0px 12px 2px rgb(1, 2, 0);
+    --btn-hover: #ff8800; 
+    --btn-inactive-text: rgb(5, 5, 5,0.7);
+    --box-shadow: 0px 0px 19px 3px gray;
+    --btn-shadow: 0px 0px 12px 2px rgb(1, 2, 0);;
+}
+  
+  body {
+    background-color: #bbbbbb;
+    width: 100vw;
+  }
+
+  .container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--theme-darker);
+    margin: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 1000px;
+    min-height: 700px;
+    
+  }
+
+  
+/* <----------- Navigation -----------> */
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  width: 100vw;
+  z-index: 1;
+
+}
+
+nav img{
+  width: 150px;
+  height:40px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.nav-links ul li{
+  float: left;
+  width: 130px;
+  height: 40px;
+  background-color:transparent;
+  opacity:0.8;
+  line-height: 40px;
+  text-align:center;
+  font-size: 20px;
+  margin-right: 2px;
+}
+
+.nav-links ul li a {
+  text-decoration:none;
+  color: white;
+  font-size: 13px;
+  font-weight:bolder;
+}
+
+.nav-links ul .current a{
+  color:#FFA033;
+  border-bottom: red solid 2px;
+}
+
+.nav-links ul li::after{
+ content: '';
+ width: 0;
+ height:2px;
+ background:red;
+ display:block;
+ bottom:0;
+ left:0;
+ margin: left;
+ transition: width 0.5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;  
+} 
+
+ul li ul li{
+  color:black;
+  display:none;
+  background-color: #775302;
+} 
+
+#ham{
+  display: none;
+}
+
+ul li:hover ul li {
+  display: block;
+  margin-bottom: 2px;
+  border-bottom:6px black solid;
+  text-align: left;
+  padding-left:2px;
+  color:#FFA033;
+  background-color: #775302;
+}
+
+ul li a{
+  display:block;
+  text-decoration: none;
+  padding-left: 7px;
+}
+
+ul li a:hover{
+  cursor: pointer;
+  color:#FFA033;
+}
+
+/* ------------- end of nav ----------------- */
+  
+ 
+  /* Hide all steps by default: */
+
+  .tab h1{
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .wrapper {
+    padding: 15px;
+    color: orange;
+    width: 80%;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+    background-color: rgba(75, 52, 0, 0.925);
+    height: 80vh;
+    min-width:1000px;
+    min-height: 585px;
+    
+  }
+  .fill{
+    margin: 10px;
+  }
+
+  #location{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+  
+  }
+
+.location-group {
+  width: 100%;
+  position: relative;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: lightgray;
+  border: 3px solid orange;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.residence {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+.input-field{
+  width: 49%;
+  margin-top: 20px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.input-field input{
+  background-color: transparent;
+  width: 100%;
+}
+
+  button {
+    margin-top: 35px;
+    height: 50px;
+    background-color: var(--theme-light);
+    box-shadow: var(--btn-shadow);
+    border-radius: 10px;
+    width: 30%;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Raleway;
+    cursor: pointer;
+    margin-left: 35%;
+    border: 1px solid black;
+  }
+
+  button:hover{
+    border:4px solid rgb(255, 255, 255);
+   background-color:  rgb(104, 104, 104) ; 
+  }
+  
+  button a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+  }
+
+/* -------------- values css -------------- */
+#location{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+
+}
+
+#wrap-values {
+  height: 100%;
+  
+}
+
+
+.values-group {
+  width: 100%;
+  height: 85%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.values-group h2 {
+  margin-top: 30px;
+ font-size: 25px;
+ margin-bottom: 15px;
+ position: relative;
+ letter-spacing: 1px;
+
+}
+
+.row-fluid {
+  height: 40%;
+  display: flex;
+  position: relative;
+  display: flex;
+  min-height:200px;
+  justify-content: center;
+  width: 100%;
+  background-color:#4b3a14;
+  flex-wrap: wrap;
+
+}
+
+.row-fluid .values{
+  height: 60px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  padding: 0px 60px 0px 60px;
+  flex-wrap: wrap;
+  min-width: 250px;
+
+}
+
+.values-group textarea{
+  margin-top: 20px;
+  max-height: 100px;
+ 
+  min-width: 900px;
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border:2px solid white;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family:Raleway;
+
+  
+}
+
+.values label{
+  font-size:25px;
+}
+
+.values input{
+  height: 25px;
+  width: 25px;
+}
+
+.v_btns {
+  display: flex;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  margin-left: 20%;
+  margin-top: 30px;
+
+}
+
+.v_btns button{
+  background-color: #FFA033;
+  margin: 0;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+
+.v_btns button:hover{
+  border:4px solid rgb(255, 255, 255);
+   background-color:  rgb(104, 104, 104) ;
+}
+
+/* ------------- business details ------------ */
+.details-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+  /* border: 3px solid white; */
+}
+
+#business-details h1{
+  margin-bottom: 50px;
+  
+}
+
+.details-group select{
+  height: 40px;
+  width: 30%;
+  padding: 4px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color: rgba(245, 245, 245, 0.897);
+  font-size: 15px;
+  font-weight: bolder;
+  color: rgb(94, 92, 92);
+
+}
+
+.details-group textarea{
+  background-color: transparent;
+  margin-top: 10px;
+  max-height: 100px;
+  min-width: 950px;
+
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+
+
+  
+}
+
+.details-group button{
+  background-color: #FFA033;
+  margin-left: 35%;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: Raleway;
+
+  
+}
+
+.details-group button:hover{
+  border:4px solid rgb(255, 255, 255);
+   background-color:  rgb(104, 104, 104) ;
+}
+
+/* ---------------- register css ------------ */
+.register-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+#register h1{
+  margin-bottom: 50px;
+}
+
+.input-field i{
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+#register .input-field{
+ width: 400px;
+}
+
+
+#register input{
+  border: none;
+  border-bottom: 4px solid #FFA033;
+  font-size: 20px;
+ 
+  background-color: transparent;
+}
+
+#bottom{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.register{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0;
+}
+
+.register button{
+  width: 200px;
+  height: 40px;
+  font-size: 13px;
+  background-color: #FFA033;
+  border-radius: 10px;
+  margin: 30px 0px 0px 0px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: Raleway;
+}
+.register button:hover{
+  border:4px solid rgb(255, 255, 255);
+   background-color:  rgb(104, 104, 104) ;
+}
+
+.register p a{
+  color: darkred;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.register p{
+  margin-left: 27%;
+  margin-top: 5px;
+}
+
+  /* #prevBtn {
+    background-color: #bbbbbb;
+  }
+   */
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    background-color: darkgray;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    opacity: 0.2;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  
+  #circles {
+    text-align:center;
+   
+  }
