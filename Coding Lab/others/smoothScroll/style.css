@@ -1,0 +1,47 @@
+html{
+    scroll-behavior:smooth;
+}
+
+.firstSection {
+    background-color: aquamarine;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top:20px ;
+
+
+}
+.secondSection {
+    background-color: rgb(134, 146, 26);
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top:20px ;
+
+
+}
+
+.thirdSection {
+    background-color: rgb(33, 172, 51);
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top:20px ;
+
+
+}
+
+.fourthSection {
+    background-color: rgb(99, 150, 133);
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top:20px ;
+
+
+}
+
