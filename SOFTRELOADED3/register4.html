@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style1.css" />
+    <script
+      src="https://kit.fontawesome.com/42b8ef037c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Progression pages</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="index.html"><img src="img/logo.png" /></a>
+
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../Aboutus.html">ABOUT</a></li>
+            <li><a href="../Contactus.html">CONTACT US</a></li>
+            <li class="current">
+              <a>OPPORTUNITIES</a>
+              <ul>
+                <li><a href="showcase.html">SHOW CASE</a></li>
+                <li><a href="#">CREDIT OPTIONS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" id="ham" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="wrapper">
+        <!-- Circles which indicates the steps of the form: -->
+        <div id="circles">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step active"></span>
+        </div>
+
+
+        <div class="tab" id="register">
+          <h1 id="title">Register</h1>
+          <div class="register-group">
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input
+                type="email"
+                placeholder="Email"
+                onkeyup="validateEmail()"
+                id="emailfield"
+              />
+              <span id="email-Error"></span>
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                onkeyup="validatePassword()"
+                id="passwordfield"
+              />
+              <span id="password-Error"></span>
+            </div>
+          </div>
+
+          <div id="bottom">
+            <div class="register">
+             
+              <button type="button" id="nextBtn" onclick="nextPrev(1)"> <a href="index.html"> Next</a>
+              </button>
+              <p>
+                Forgot password
+                <a href="#">Click Here</a>
+              </p>
+              <span id="form-Error"></span>
+           
+            </div>
+          </div>
+        </div>  
+
+      </div>
+    </div> 
+
+    <script src="main.js"></script>
+  </body>
+</html>
